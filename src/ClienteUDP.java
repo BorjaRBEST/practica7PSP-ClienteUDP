@@ -3,13 +3,13 @@ import java.io.*;
 
 public class ClienteUDP {
     public static void main(String[] args) {
-        final String servidorIP = "localhost"; // Cambia esto si el servidor se encuentra en otro equipo
-        final int puerto = 12345; // Puerto en el que está escuchando el servidor
+        final String servidorIP = "localhost";
+        final int puerto = 12345;
 
         try (DatagramSocket socket = new DatagramSocket()) {
             InetAddress servidorDireccion = InetAddress.getByName(servidorIP);
 
-            int numero = 5; // Cambia el número a tu elección
+            int numero = 5; // Metemos el número solicitado en el ejercicio
             String mensaje = Integer.toString(numero);
             byte[] sendData = mensaje.getBytes();
 
